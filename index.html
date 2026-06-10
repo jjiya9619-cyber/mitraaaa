@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jan Sampark Service Portal</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="topbar" aria-label="Primary">
+        <a class="brand" href="#home" aria-label="Jan Sampark Service Portal home">
+          <span class="brand-mark">JS</span>
+          <span>
+            <strong>Jan Sampark Service Portal</strong>
+            <small>With you, for your service</small>
+          </span>
+        </a>
+        <div class="nav-actions">
+          <a href="#directory">Find Service</a>
+          <a href="#posters">Posters</a>
+          <a href="tel:14555">Help</a>
+        </div>
+      </nav>
+
+      <section id="home" class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">CSC / Help Desk / Online Portal</p>
+          <h1>Choose a service and get the exact documents you need.</h1>
+          <p>
+            Use the sidebar filters to narrow services, then select one item to view eligibility,
+            required documents, application location, and the next steps.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#directory">Find a Service</a>
+            <a class="secondary-btn" href="tel:14555">Helpline 14555</a>
+          </div>
+        </div>
+        <aside class="quick-panel" aria-label="Quick service summary">
+          <div>
+            <span class="stat">38</span>
+            <span>Services and schemes</span>
+          </div>
+          <div>
+            <span class="stat">24x7</span>
+            <span>Online information</span>
+          </div>
+          <div>
+            <span class="stat">14555</span>
+            <span>Jan Sampark help desk</span>
+          </div>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section id="directory" class="directory-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Guided Service Finder</p>
+            <h2>Step 1: select a service</h2>
+          </div>
+          <p class="section-note">Step 2 appears on the right with documents and application details.</p>
+        </div>
+
+        <div class="portal-layout">
+          <aside class="sidebar" aria-label="Service filters">
+            <label class="search-box" for="serviceSearch">
+              <span aria-hidden="true">?</span>
+              <input id="serviceSearch" type="search" placeholder="Search service, document, benefit, or office">
+            </label>
+
+            <div class="filter-block">
+              <h3>Service Type</h3>
+              <div class="filter-stack" role="group" aria-label="Filter services">
+                <button class="chip active" type="button" data-filter="all">All services</button>
+                <button class="chip" type="button" data-filter="document">Documents</button>
+                <button class="chip" type="button" data-filter="scheme">Schemes</button>
+              </div>
+            </div>
+
+            <div class="filter-block">
+              <h3>Application Mode</h3>
+              <div class="filter-stack" role="group" aria-label="Filter by application mode">
+                <button class="chip" type="button" data-filter="online">Online</button>
+                <button class="chip" type="button" data-filter="csc">CSC</button>
+              </div>
+            </div>
+
+            <div class="filter-block">
+              <h3>Quick Help</h3>
+              <a class="help-tile" href="tel:14555">
+                <strong>14555</strong>
+                <span>Jan Sampark Help Desk</span>
+              </a>
+            </div>
+
+            <button id="clearSearch" class="reset-btn" type="button">Reset filters</button>
+          </aside>
+
+          <div class="service-picker">
+            <div class="picker-head">
+              <div>
+                <span id="resultCount"></span>
+                <strong id="activeFilterLabel">All services</strong>
+              </div>
+              <span class="step-pill">Step 1</span>
+            </div>
+            <div id="serviceList" class="service-list" aria-label="Selectable services"></div>
+          </div>
+
+          <article id="serviceDetail" class="detail-panel" aria-live="polite"></article>
+        </div>
+      </section>
+
+      <section id="posters" class="poster-section">
+        <div class="section-heading">
+          <p class="eyebrow">Original Posters</p>
+          <h2>Source information posters</h2>
+        </div>
+        <div class="poster-grid">
+          <a href="assets/documents.png" target="_blank" rel="noreferrer">
+            <img src="assets/documents.png" alt="Documents and certificate services poster">
+          </a>
+          <a href="assets/schemes.png" target="_blank" rel="noreferrer">
+            <img src="assets/schemes.png" alt="Jan Sampark office service details poster">
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <strong>Jan Sampark Help Desk: <a href="tel:14555">14555</a></strong>
+      <span>For more information, contact the nearest CSC, Mamlatdar office, or related department.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
